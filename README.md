@@ -80,25 +80,27 @@ faraday 2.12.2
 detection from the manifest. Every probe MUST ship `.whitesource`
 with `scanSettings.versioning`.
 
-For this probe the Ruby version is pinned exactly because the
-pattern specifically targets Ruby 3.4.10 behavior:
+Both `versioning` entries are exact version pins (never ranges), so
+Mend's `install-tool` provisions the precise toolchain the probe was
+authored against:
 
 ```json
 {
   "scanSettings": {
     "versioning": {
-      "bundler": ">=2.6 <3",
+      "bundler": "2.6.9",
       "ruby": "3.4.10"
     }
   }
 }
 ```
 
-`ruby "3.4.10"` exact pin (not a range) ensures Mend's `install-tool`
-provisions the exact patch release that changed stdlib bundling
-behavior. `bundler ">=2.6 <3"` covers the Bundler major series
-that first shipped full Ruby 3.4 support (Bundler 2.6.0 landed
-alongside Ruby 3.4 GA).
+`ruby "3.4.10"` exact pin ensures Mend provisions the exact patch
+release that changed stdlib bundling behavior. `bundler "2.6.9"` is
+pinned to the exact resolved version from the `BUNDLED WITH` section
+of `Gemfile.lock` (equal to the probe's `pm_version_tested`) — a
+range like `>=2.6 <3` would let `install-tool` drift to a different
+Bundler patch than the one the expected tree was generated with.
 
 No additional `whitesource.config` UA config is required for this
 probe — resolver-driven detection is lockfile-based (default).
