@@ -1,0 +1,8 @@
+{
+  "scanSettings": {
+    "versioning": {
+      "bundler": ">=2.6 <3",
+      "ruby": "3.4.10"
+    }
+  }
+}
