@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "pm": "bundler",
+  "pm_version_tested": "2.6.9",
+  "pm_version_under_test": "2.6.9",
+  "source_file": "Gemfile.lock",
+  "generated_at": "2026-07-01T03:28:29Z",
+  "root": {
+    "name": "bundled-pm-change",
+    "version": "0.1.0",
+    "dependencies": [
+      "bigdecimal",
+      "faraday",
+      "minitest",
+      "mutex_m",
+      "ostruct",
+      "rack",
+      "rake"
+    ]
+  },
+  "packages": {
+    "bigdecimal": {
+      "version": "3.1.9",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null,
+        "stdlib_note": "Extracted from Ruby stdlib in Ruby 3.4; must be declared as explicit Bundler dep under Ruby >=3.4"
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "faraday": {
+      "version": "2.12.2",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": [
+        "faraday-net_http",
+        "json",
+        "logger"
+      ]
+    },
+    "faraday-net_http": {
+      "version": "3.4.0",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": [
+        "net-http"
+      ]
+    },
+    "json": {
+      "version": "2.10.2",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "logger": {
+      "version": "1.6.6",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "minitest": {
+      "version": "5.25.5",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "test",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "mutex_m": {
+      "version": "0.3.0",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null,
+        "stdlib_note": "Extracted from Ruby stdlib in Ruby 3.4; must be declared as explicit Bundler dep under Ruby >=3.4"
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "net-http": {
+      "version": "0.6.0",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null,
+        "stdlib_note": "net-http was extracted from the stdlib in the Ruby 3.x series; required by faraday-net_http"
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": [
+        "uri"
+      ]
+    },
+    "ostruct": {
+      "version": "0.6.1",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null,
+        "stdlib_note": "Extracted from Ruby stdlib in Ruby 3.4; must be declared as explicit Bundler dep under Ruby >=3.4"
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "rack": {
+      "version": "3.1.14",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "rake": {
+      "version": "13.2.1",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "dev",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    },
+    "uri": {
+      "version": "1.0.3",
+      "source": "registry",
+      "source_detail": {
+        "remote": "https://rubygems.org/",
+        "platform": null
+      },
+      "group": "main",
+      "extras_activating_this": [],
+      "marker": null,
+      "dependencies": []
+    }
+  },
+  "project_metadata": {
+    "groups": [
+      "main",
+      "dev",
+      "test"
+    ],
+    "optional_groups": [],
+    "ruby_version_constraint": "~> 3.4.10",
+    "ruby_version_resolved": "ruby 3.4.10p0"
+  },
+  "warnings": [
+    "This probe targets Ruby 3.4.10 bundled PM change: bigdecimal, mutex_m, ostruct were extracted from the Ruby stdlib into standalone gems in Ruby 3.4. Mend must detect them as registry sources, not as implicit stdlib builtins.",
+    "The Gemfile pins ruby '~> 3.4.10'. Mend's resolver reads the RUBY VERSION section of Gemfile.lock. If Mend drops that section, project_metadata.ruby_version_constraint will be absent from scan output.",
+    "faraday-net_http 3.4.0 requires net-http >= 0.5.0 which requires uri. Under Ruby 3.4 these are explicit Bundler resolutions. Missing any node in this chain indicates the resolver is treating them as stdlib builtins."
+  ]
+}
